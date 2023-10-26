@@ -3,7 +3,8 @@ A number of SQL queries
 
 ## ER diagram description
 **acquisition**
-Contains information about the purchases of one company by another. The table includes the following fields:
+
+*Contains information about the purchases of one company by another. The table includes the following fields:*
 - Primary key id: Identifier or unique purchase number.
 - Foreign key acquiring_company_id: References the company table, identifying the acquiring company, the one buying another company.
 - Foreign key acquired_company_id: References the company table, identifying the company being acquired.
@@ -12,9 +13,10 @@ Contains information about the purchases of one company by another. The table in
 - acquired_at: Date of the transaction.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **company**
-Contains information about startup companies. The table includes the following fields:
+
+*Contains information about startup companies. The table includes the following fields:*
 - Primary key id: Identifier or unique company number.
 - name: Company name.
 - category_code: Company's field of activity, e.g., news or social.
@@ -30,9 +32,10 @@ Contains information about startup companies. The table includes the following f
 - milestones: The number of significant milestones in the company's history.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **education**
-Stores information about the education levels of company employees. The table includes the following fields:
+
+*Stores information about the education levels of company employees. The table includes the following fields:*
 - Primary key id: Unique record number for education information.
 - Foreign key person_id: References the people table, identifying the person whose information is in the record.
 - degree_type: Educational degree type, e.g., BA (Bachelor of Arts) or MS (Master of Science).
@@ -40,9 +43,10 @@ Stores information about the education levels of company employees. The table in
 - graduated_at: Date of graduation.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **fund**
-Contains information about venture capital funds. The table includes the following fields:
+
+*Contains information about venture capital funds. The table includes the following fields:*
 - Primary key id: Unique fund number.
 - name: Fund name.
 - founded_at: Fund's founding date.
@@ -54,9 +58,10 @@ Contains information about venture capital funds. The table includes the followi
 - milestones: The number of significant milestones in the fund's history.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **funding_round**
-Contains information about investment rounds. The table includes the following fields:
+
+*Contains information about investment rounds. The table includes the following fields:*
 - Primary key id: Unique investment round number.
 - Foreign key company_id: References the company table, identifying the company participating in the investment round.
 - funded_at: Date of the investment round.
@@ -68,18 +73,20 @@ Contains information about investment rounds. The table includes the following f
 - is_last_round: Indicates whether this round is the company's last.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **investment**
-Contains information about investments by venture capital funds in startup companies. The table includes the following fields:
+
+*Contains information about investments by venture capital funds in startup companies. The table includes the following fields:*
 - Primary key id: Unique investment number.
 - Foreign key funding_round_id: References the funding_round table, identifying the investment round.
 - Foreign key company_id: References the company table, identifying the startup company receiving the investment.
 - Foreign key fund_id: References the fund table, identifying the fund making the investment.
 - created_at: Date and time of record creation in the table.
 - updated_at: Date and time of record update in the table.
-
+---
 **people**
-Contains information about employees of startup companies. The table includes the following fields:
+
+*Contains information about employees of startup companies. The table includes the following fields:*
 - Primary key id: Unique employee number.
 - first_name: Employee's first name.
 - last_name: Employee's last name.
